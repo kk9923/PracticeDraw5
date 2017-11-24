@@ -26,13 +26,13 @@ public class Practice03OnDrawLayout extends LinearLayout {
 
     {
         // 在这里插入 setWillNotDraw(false) 以启用完整的绘制流程
+        setWillNotDraw(false);   // 调用自身的onDraw()方法，有些ViewGroup  会屏蔽掉该方法
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
-        pattern.draw(canvas);
+        pattern.draw(canvas);   // 绘制红色圆圈
     }
 
     private class Pattern {

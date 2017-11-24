@@ -47,5 +47,7 @@ public class Practice02BeforeOnDrawView extends AppCompatTextView {
         bounds.top = layout.getLineTop(layout.getLineCount() - 3);
         bounds.bottom = layout.getLineBottom(layout.getLineCount() - 3);
         canvas.drawRect(bounds, paint);
+
+        super.onDraw(canvas);
     }
 }
